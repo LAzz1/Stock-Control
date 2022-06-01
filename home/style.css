@@ -1,0 +1,32 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background-image: linear-gradient(to right, rgb(159, 204, 255), rgb(210, 95, 251));
+}
+
+
+header h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 50px;
+    padding: 5rem 30%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons button {
+    padding: 0.3rem 10%;
+    font-size: 14px;
+    border-radius: 30px;
+    border: none;
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color:azure;
+    background-color: rgba(58, 94, 255, 0.5);
+    cursor: pointer;
+}
