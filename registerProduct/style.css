@@ -13,6 +13,7 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
+
 /*Botão de voltar na esquerda superior & h1 da página*/
 .back-button button {
     padding: 0.2rem 2%;
@@ -22,7 +23,7 @@ hr {
     border: none;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    color:azure;
+    color: azure;
     background-color: rgb(0, 0, 0);
     cursor: pointer;
 }
@@ -66,7 +67,7 @@ header h1 {
     border: none;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    color:azure;
+    color: azure;
     background-color: rgba(130, 198, 246, 0.5);
     cursor: pointer;
 }
@@ -87,7 +88,7 @@ fieldset legend {
 ::-webkit-input-placeholder {
     color: rgba(202, 202, 202, 0.5);
     font-size: small;
-  }
+}
 
 .inputSpace {
     outline: none;
@@ -126,6 +127,7 @@ fieldset legend {
     pointer-events: none;
     transition: 0.5px;
 }
-.radioInput{
+
+.radioInput {
     cursor: pointer;
 }

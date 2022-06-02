@@ -1,47 +1,55 @@
-body{
-    font-family: 'Raleway', sans-serif;
-    background-image: linear-gradient(to right, rgb(159, 204, 255), rgb(210, 95, 251));
+body {
+  font-family: 'Raleway', sans-serif;
+  background-image: linear-gradient(to right, rgb(159, 204, 255), rgb(210, 95, 251));
 }
-header h1{
-    display:flex;
-    flex-direction: column;
-    align-items:center;
-    padding:1rem 30%;
+
+header h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 30%;
 }
-header .back-button button{
-    padding: 0.2rem 2%;
-    font-size: 14px;
-    margin-left: 10px;
-    border-radius: 15px;
-    border: none;
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
-    color:azure;
-    background-color: rgb(0, 0, 0);
-    cursor: pointer;
+
+header .back-button button {
+  padding: 0.2rem 2%;
+  font-size: 14px;
+  margin-left: 10px;
+  border-radius: 15px;
+  border: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  color: azure;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
 }
+
 /*Tabela*/
 #prod-table {
-    font-family: 'Raleway', sans-serif;
-    border-collapse: collapse;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgb(214, 214, 214);
-  }
-  
-  #prod-table td, #prod-table th {
-    padding: 8px;
-  }
-  
-  #prod-table tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #prod-table tr:hover {background-color: #ddd;}
-  
-  #prod-table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #dd9dff;
-    color: white;
-  }
+  font-family: 'Raleway', sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(214, 214, 214);
+}
+
+#prod-table td,
+#prod-table th {
+  padding: 8px;
+}
+
+#prod-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#prod-table tr:hover {
+  background-color: #ddd;
+}
+
+#prod-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #dd9dff;
+  color: white;
+}

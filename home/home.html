@@ -22,6 +22,20 @@
         <br>
         <button type="submit" onclick="window.location.href='../viewProduct/view.html'">Visualizar Estoque</button>
     </div>
+    <div class="scripts-page">
+        <Script>
+            var dataLayer = []
+        </Script>
+        <Script>
+            document.querySelector('.buttons').addEventListener('click', function (event) {
+                event = event || window.event;
+                var target = event.target || event.srcElement,
+                    text = target.textContent || target.innerText;
+
+                dataLayer.push({ 'event': 'clickButton', 'buttonName': `${text}` })
+            })
+        </Script>
+    </div>
 </body>
 
 </html>
