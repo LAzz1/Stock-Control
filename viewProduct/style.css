@@ -23,6 +23,13 @@ header .back-button button {
   cursor: pointer;
 }
 
+h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 30%;
+}
+
 /*Tabela*/
 #prod-table {
   font-family: 'Raleway', sans-serif;

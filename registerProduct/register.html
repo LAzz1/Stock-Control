@@ -21,7 +21,7 @@
         <h1>Stock Control</h1>
     </header>
     <div class="form-box">
-        <form id="userRegistration" method="post" action="thankyou.html" class="registerUser">
+        <form id="userRegistration" method="post" action="connect.php" class="registerUser">
             <fieldset>
                 <legend><b>Registro de Produtos</b></legend>
                 <br>
@@ -47,17 +47,17 @@
                     <br>
                     <div class="reservation" id="prod-reservation">
                         <label>Alocado para algum paciênte? </label>
-                        <input class="radioInput" type="radio" id="yes" name="reservation" value="ProdAlocated"
+                        <input class="radioInput" type="radio" id="yes" name="reservation" value="sim"
                             required>
-                        <label for="ads">Sim</label>
-                        <input class="radioInput" type="radio" id="no" name="reservation" value="ProdNotAlocated"
+                        <label for="yes">Sim</label>
+                        <input class="radioInput" type="radio" id="no" name="reservation" value="não"
                             required checked>
-                        <label for="si">Não</label>
+                        <label for="no">Não</label>
                     </div>
                     <br>
                     <div id="lote-expiration">
                         <label for="loteexpiration">Validade do lote</label>
-                        <input type="date" class="inputData" id="loteexpiration" name="expiration">
+                        <input type="date" class="inputData" id="loteexpiration" name="expiration" required>
                     </div>
                 </div>
                 <br><br>
