@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta http-equiv="Content-Language" content="pt-br">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,9 +48,11 @@
                     <br>
                     <div class="reservation" id="prod-reservation">
                         <label>Alocado para algum paciênte? </label>
-                        <input class="radioInput" type="radio" id="yes" name="reservation" value="sim" required>
+                        <input class="radioInput" type="radio" id="yes" name="reservation" value="sim"
+                            required>
                         <label for="yes">Sim</label>
-                        <input class="radioInput" type="radio" id="no" name="reservation" value="não" required checked>
+                        <input class="radioInput" type="radio" id="no" name="reservation" value="não"
+                            required checked>
                         <label for="no">Não</label>
                     </div>
                     <br>
@@ -57,11 +60,69 @@
                         <label for="loteexpiration">Validade do lote</label>
                         <input type="date" class="inputData" id="loteexpiration" name="expiration" required>
                     </div>
+                    <script>
+                        function preventSubmitError(event){
+                            rawInputDate = document.querySelector('[class="inputData"]').value
+                            splittedInputDate = rawInputDate.split('-');
+                            
+                            var alertMsg =`Tem certeza que deseja cadastrar esse produto?\n\nNome: ${document.querySelector('[id="prodname"]').value}\nLote: ${document.querySelector('[id="lotenumber"]').value}\nFunção: ${document.querySelector('[id="prodfunction"]').value}\nData de validade: ${splittedInputDate[2]}/${splittedInputDate[1]}/${splittedInputDate[0]}`
+                            
+                            if (!confirm(alertMsg)) {
+                                event.preventDefault();
+                                return alert('Seu produto não foi cadastrado!');
+                            }
+                        }
+                    </script>
+                    <script>
+                        function validations(inputDate,inputText){
+                            
+                            function dateValidation(inputDate){
+                                rawInputDate = document.querySelector('[class="inputData"]').value
+                                splittedInputDate = rawInputDate.split('-');
+    
+                                rawTodayDate = new Date().toLocaleDateString();
+                                splittedTodayDate = rawTodayDate.split('/');
+                                j = 2;
+                                for(var i=0;i<2;i++){
+                                    if(splittedInputDate[j--] < splittedTodayDate[i++]){
+                                        return inputDate = false;
+                                    }
+                                }
+                            }
+                            
+                            function inputWordValidation(inputText){
+                                splittedProdName = (document.querySelector('[id="prodname"]').value.trim()).split('')
+                                splittedProdFunction = (document.querySelector('[id="prodfunction"]').value.trim()).split('');
+
+                                if(splittedProdName.length < 2 || splittedProdFunction.length < 2){
+                                    return inputText = false;
+                                }
+                            }
+
+                            if(inputWordValidation(inputText) == false && dateValidation(inputDate) == false){
+                                event.preventDefault();
+                                return alert("O nome e função do produto devem conter no minimo 2 letras!\nA data também não pode estar expirada!");
+                            }
+                            else if(inputWordValidation(inputText) == undefined && dateValidation(inputDate) == false){
+                                event.preventDefault();
+                                return alert("A data não pode estar expirada!");
+                            }
+                            else if(inputWordValidation(inputText) == false && dateValidation(inputDate) == undefined){
+                                event.preventDefault();
+                                return alert("O nome e função do produto devem conter no minimo 2 letras!");
+                            }
+                            else{
+                                preventSubmitError(event)
+                            }
+                            
+                        }
+                            
+                    </script>
                 </div>
                 <br><br>
             </fieldset>
             <div class="form-buttons">
-                <button type="submit">Enviar</button>
+                <button type="submit" onclick="validations(event)">Enviar</button>
                 <button type="reset">Limpar</button>
             </div>
         </form>
