@@ -69,6 +69,7 @@
                     <div id="lote-expiration">
                         <label for="loteexpiration">Validade do lote</label>
                         <input type="date" placeholder="dd-mm-yyyy" value="<?php echo $row['expiration'];?>" class="inputData" id="loteexpiration" name="expiration" required>
+                        <input type="date" value="<?php echo $row['expiration'];?>" class="inputData" id="loteexpiration" name="expiration" required>
                     </div>
                                      <script>
                         function preventSubmitError(event){
