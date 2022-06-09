@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="text-align: center; color:rgb(157, 83, 226); font-weight: bold;">
+      Stock Control
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div id="container">
+    <strong>Login</strong>
+
+    <h2 class="item-text-wrap"></h2>
+
+    <form [formGroup]="myForm" action="connect.php" method="post">
+      <ion-item>
+        <ion-label position="fixed">Usuário</ion-label>
+        <ion-input type="text" formControlName="name" name="name"></ion-input>
+      </ion-item>
+
+      <h2 class="item-text-wrap"></h2>
+
+      <ion-item>
+        <ion-label position="fixed">Senha</ion-label>
+        <ion-input type="text" formControlName="senha" name="senha"></ion-input>
+      </ion-item>
+
+      <h2 class="item-text-wrap"></h2>
+
+      <ion-button type="submit" [disabled]="!myForm.valid" onclick="window.location.href='connect.php'">
+        Entrar
+      </ion-button>
+    </form>
+  </div>
+</ion-content>
