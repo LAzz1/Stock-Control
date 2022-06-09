@@ -1,0 +1,29 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background-image: linear-gradient(to right, rgb(159, 204, 255), rgb(210, 95, 251));
+}
+
+header h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 30%;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 30%;
+}
+
+.back-home a {
+    margin: 0 1.5rem;
+    font-size: 2rem;
+    color: rgb(5, 22, 118);
+    text-decoration: none;
+}
+
+.back-home a:hover {
+    color: rgb(94, 108, 254);
+}

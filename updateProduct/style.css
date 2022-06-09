@@ -1,0 +1,133 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: large;
+    background-image: linear-gradient(to right, rgb(159, 204, 255), rgb(210, 95, 251));
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-radius: 2px;
+    border-top: 3px solid rgb(255, 255, 255);
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*Botão de voltar na esquerda superior & h1 da página*/
+.back-button button {
+    padding: 0.2rem 2%;
+    font-size: 14px;
+    margin-left: 10px;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: azure;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+header h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20%;
+    border-bottom: var(--border);
+    top: 100px;
+    left: 200px;
+    right: 200px;
+    z-index: 1000;
+}
+
+/*Caixa do formulario*/
+.form-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(65, 65, 65, 0.5);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/*Botoes do final do forms*/
+
+.form-box .form-buttons {
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.form-box button {
+    padding: 0.3rem 10%;
+    font-size: 14px;
+    margin-left: 30px;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: azure;
+    background-color: rgba(130, 198, 246, 0.5);
+    cursor: pointer;
+}
+
+/*Forms Fieldset*/
+
+fieldset {
+    border: none;
+    border-color: blueviolet;
+}
+
+fieldset legend {
+    text-align: center;
+    padding: 5px;
+}
+
+/*Forms primeiros 3 inputs*/
+::-webkit-input-placeholder {
+    color: rgba(202, 202, 202, 0.5);
+    font-size: small;
+}
+
+.inputSpace {
+    outline: none;
+    background: none;
+    border: none;
+    width: 100%;
+    color: azure;
+    letter-spacing: 1.5px;
+    font-family: 'Raleway', sans-serif;
+    font-size: medium;
+}
+
+/*Forms input da parte de baixo*/
+.inputData {
+    outline: none;
+    border: none;
+    height: 25px;
+    width: 125px;
+    padding-left: 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    background-color: rgba(240, 240, 240, 0.5);
+    cursor: pointer;
+}
+
+#lote-expiration label {
+    padding-right: 7px;
+}
+
+.labelInput {
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: 0.5px;
+}
+
+.radioInput {
+    cursor: pointer;
+}
