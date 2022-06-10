@@ -1,0 +1,23 @@
+body {
+  --padding-top: 500px;
+  cursor: url('https://ionicframework.com/img/finger.png'), auto;
+}
+
+.header .col {
+  background-color:rgba(0, 29, 107, 0.589);
+}
+
+.col {
+  background-color:rgba(61, 61, 61, 0.39);
+  border: solid 1px rgb(255, 255, 255);
+  border-bottom-style: none;
+  border-right-style: none;
+}
+
+.col:last-child {
+  border-right: solid 1px rgb(255, 255, 255);
+}
+
+.row:last-child .col {
+  border-bottom: solid 1px rgb(255, 255, 255);
+}

@@ -1,0 +1,32 @@
+<ion-content [fullscreen]="true">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="//code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet">
+    <script src="//code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+  </head>
+
+  <body>
+    <ion-content>
+      <ion-header [translucent]="true">
+        <ion-toolbar>
+          <ion-title>
+            Stock Control
+          </ion-title>
+        </ion-toolbar>
+      </ion-header>
+        <div class="row header">
+          <div class="col">Total</div>
+          <div class="col">Nome</div>
+          <div class="col">Lote</div>
+          <div class="col">Validade</div>
+        </div>
+        <div class="row" *ngFor="let product of products">
+          <div class="col">{{product.prodCount}}</div>
+          <div class="col">{{product.name}}</div>
+          <div class="col">{{product.lote}}</div>
+          <div class="col">{{product.expiration}}</div>
+        </div>
+    </ion-content>
+  </body>
+</ion-content>
