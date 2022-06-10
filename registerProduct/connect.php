@@ -1,4 +1,6 @@
 <?php
+    require_once 'headers.php';
+
     $name = filter_input(INPUT_POST,'name');
     $lote = filter_input(INPUT_POST,'lote');
     $function = filter_input(INPUT_POST,'function');
@@ -7,24 +9,17 @@
     
 
     $host = "localhost";
-    $dbusername = "";
-    $dbpassword = "";
-    $dbname = "";
+    $dbusername = "id19038564_zilio";
+    $dbpassword = "@6gEzt0K@4{g8RCi";
+    $dbname = "id19038564_stockcontrol";
     
     $conn = new mysqli($host,$dbusername,$dbpassword,$dbname);
     
-    if(mysqli_connect_error()){
-        die('connect Error('. mysqli_connect_errno() .')'.mysqli_connect_error());
-    }
-    else{
-        $sql = "INSERT INTO products(name,lote,function,reservation,expiration) 
-        values('$name','$lote','$function','$reservation','$expiration')";
-        if($conn->query($sql)){
-            header("Location: https://uamstockproject.000webhostapp.com/registerProduct/thankyou.html");
-        }
-        else{
-            echo "Error ".$sql."<br>".$conn->error;
-        }
-        $conn->close();
+    $query = "INSERT INTO `products` (`name`,`lote`,`function`,`reservation`,`expiration`) VALUES ('$name','$lote','$function','$reservation','$expiration')";
+    $insert = mysqli_query($conn,$query);
+    if(!$insert){
+        echo "ERRO";
+    } else {
+        echo "DEU BOM";
     }
 ?>
