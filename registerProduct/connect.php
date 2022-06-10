@@ -9,24 +9,17 @@
     
 
     $host = "localhost";
-    $dbusername = "root";
-    $dbpassword = "";
-    $dbname = "produtos";
+    $dbusername = "id19038564_zilio";
+    $dbpassword = "@6gEzt0K@4{g8RCi";
+    $dbname = "id19038564_stockcontrol";
     
     $conn = new mysqli($host,$dbusername,$dbpassword,$dbname);
     
-    if($_SERVER['REQUEST_METHOD'] === 'PUT'){
-        if (isset($_GET['id'])) {
-            $id = $conn->real_escape_string($_GET['id']);
-            $data = json_decode(file_get_contents("php://input"));
-            $sql = $conn->query("UPDATE products SET name = '".$data->name."', lote = '".$data->lote."', \
-            function = '".$data->function."', reservation = '".$data->reservation."', \
-            expiration = '".$data->expiration."' WHERE id = '$id'");
-            if($sql){
-                header("Location: http://localhost:5555/Stock-Control/updateProduct/thankyou.html");
-            } else {
-                exit(json_encode(array('status' => 'error')));
-            }
-        }
+    $query = "INSERT INTO `products` (`name`,`lote`,`function`,`reservation`,`expiration`) VALUES ('$name','$lote','$function','$reservation','$expiration')";
+    $insert = mysqli_query($conn,$query);
+    if(!$insert){
+        echo "ERRO";
+    } else {
+        echo "DEU BOM";
     }
 ?>
