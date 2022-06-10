@@ -1,8 +1,8 @@
 <?php
     $host = "localhost";
-    $dbusername = "";
+    $dbusername = "root";
     $dbpassword = "";
-    $dbname = "";
+    $dbname = "produtos";
     
     $conn = new mysqli($host,$dbusername,$dbpassword,$dbname);
 

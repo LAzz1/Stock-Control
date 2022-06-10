@@ -2,7 +2,7 @@
     include_once 'connect.php';
     if(count($_POST)>0){
         mysqli_query($conn,"UPDATE products set name='{$_POST['name']}',lote='{$_POST['lote']}',function='{$_POST['function']}',reservation='{$_POST['reservation']}',expiration='{$_POST['expiration']}' WHERE id='{$_GET['id']}'");
-         header("Location: https://uamstockproject.000webhostapp.com/updateProduct/thankyou.html");
+         header("Location: http://localhost:5555/Stock-Control/updateProduct/thankyou.html");
     }
         $sql= "SELECT * FROM products WHERE id='{$_GET['id']}'";
         $result = mysqli_query($conn,$sql);

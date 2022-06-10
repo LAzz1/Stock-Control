@@ -7,9 +7,9 @@
     
 
     $host = "localhost";
-    $dbusername = "";
+    $dbusername = "root";
     $dbpassword = "";
-    $dbname = "";
+    $dbname = "produtos";
     
     $conn = mysqli_connect($host,$dbusername,$dbpassword,$dbname);
     
